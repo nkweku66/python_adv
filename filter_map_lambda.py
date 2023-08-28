@@ -4,11 +4,11 @@ numbers = [1, 56, 234, 87, 4, 76, 24, 69, 90, 135]
 def is_even(x):
 #numbers = [1, 56,234,87,4,76,24,69,90,135]
 #x = int(input("Type a number: "))
-    if x % 2 == 0:
-        return True
-    else:
+    if  not x % 2:
         return False
-call = (lambda x : True if x % 2==0 else False)
+    else:
+        return True
+call = (lambda x : False if not x % 2 else True)
 ans = filter(call, numbers)
 
 print(list(ans))
